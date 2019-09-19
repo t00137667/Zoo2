@@ -1,0 +1,35 @@
+@startuml
+skinparam classAttributeIconSize 0
+
+interface Flyable{
++{abstract}fly()
+}
+
+class Animal{
+- age: int
+- gender: char
+- weightInPounds: int
++eat()
++sleep()
+}
+
+class Zoo
+
+class Bird{
++fly()
+}
+
+class Fish{
++swim()
+}
+
+class Chicken{
++fly()
+}
+class Sparrow
+
+Zoo  -- "0..*"Animal : < lives in
+Animal <|-- (Bird,Fish) : is a
+Bird <|-- (Chicken,Sparrow) : is a
+Sparrow ..|> Flyable
+@enduml
