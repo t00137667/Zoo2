@@ -5,4 +5,9 @@ public class Fish extends Animal {
     public void swim(){
         System.out.println("I am swiming...");
     }
+
+    @Override
+    public void move() {
+        System.out.println("The fish is wiggling.");
+    }
 }
